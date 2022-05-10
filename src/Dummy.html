@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+// Normal Function 
+function myfun(a, b) {
+    return a + b;
+}
+
+// Expression Function
+const myfun = function (a, b) {
+    return a + b;
+}
+
+// Arrow function
+const myfun = (a,b) => a + b;
+// ================================================
+
+import React from "react";
+import ReactDOM from "react-dom";
+// import App from "./App";
+import "./index.css";
+import Card from "./Card";
+import Seriesdetails from "./Seriesdetails";
+// console.log(Seriesdetails[0]);
+
+// const Netflixcard = val =>
+//     <Card
+//         imgsrc={val.imgsrc}
+//         title={val.title}
+//         SeriesName={val.SeriesName}
+//         WebLink={val.WebLink}
+//     />
+
+// function Netflixcard(val) //array.map(function(currentvVal,index,arr),thisValue)
+// {
+//     // console.log(val);
+//     return (
+//         <Card
+//             imgsrc={val.imgsrc}
+//             title={val.title}
+//             SeriesName={val.SeriesName}
+//             WebLink={val.WebLink}
+//         />
+//     );
+// }
+
+ReactDOM.render(
+    <>
+        <h1 className="heading_style"> List of the top Netflix series in 2022 </h1>
+
+        {/* First Option: #1 assign the value for all elements
+        <Card
+        imgsrc="https://upload.wikimedia.org/wikipedia/en/6/61/My_First_First_Love_%282019_poster%29.jpg" 
+        title="A Netflix Orginal Series" 
+        SeriesName="My First First Love" 
+        WebLink="https://www.netflix.com/in/title/80100172" 
+        />, */}
+
+        {/* Second Option:#2 need to assign the index number for per record 
+        <Card imgsrc={Seriesdetails[0].imgsrc} 
+        title={Seriesdetails[0].title} 
+        SeriesName={Seriesdetails[0].SeriesName} 
+        WebLink={Seriesdetails[0].WebLink}
+        /> */}
+
+        {/* Third Option:#3 using map of function */}
+        {/* {Seriesdetails.map(Netflixcard)}  */}
+
+        {/* OR Fofth Option:#5 using map of function wit return */}
+
+        {/* {Seriesdetails.map(function Netflixcard(val) {
+            return (
+                <Card
+                    imgsrc={val.imgsrc}
+                    title={val.title}
+                    SeriesName={val.SeriesName}
+                    WebLink={val.WebLink}
+                />
+            );
+        })} */}
+
+        {/* OR Forth Option:#4 using Arrow function */}
+
+        {Seriesdetails.map((val,index) => {
+            {/* console.log(index); */}
+            return (
+                <Card
+                    imgsrc={val.imgsrc}
+                    title={val.title}
+                    SeriesName={val.SeriesName}
+                    WebLink={val.WebLink}
+                />
+            );
+        })}
+
+
+    </>,
+    document.getElementById('root')
+);
+
+// ===========================================================
+// Map Array Method 
+The map() method create a new array with the result of calling function for every array Element
+the map() Method calls the provided function once for each element in an array in order 
+syntax : array.map(function(currentvVal,index,arr),thisValue);
+
+Argument:                                             Descriptions:
+currentValue                          :Required the value of the current element
+Index optional                        :the array index of the current value
+arr optional                          :the array object the current element belongs to.
+
+
+<div>
+    <p id="mydata"></p>
+</div>
+
+map function in react  :
+{/* {Seriesdetails.map((val, index) => {
+    //console.log(index); 
+       return (
+           <Card
+               key={val.id}
+               imgsrc={val.imgsrc}
+               title={val.title}
+               SeriesName={val.SeriesName}
+               WebLink={val.WebLink}
+           />
+       );
+   })
+   } */}
+
+   Ternory condition in react :
+   syntax : condition ? exprIfTrue:exprIfFalse
+
+   const Fevs = "Amazone";
+
+const Fevseries = () => {
+if (Fevs==="Netlix") {
+    return <Amazone />;
+}
+else{
+    return <Netflix />;
+}
+}
+{(Fevs==="Netlix") ? <Amazone />:<Netflix /> }
+====================
+useState is a array and defined two value one is fixed 
+const[count,setCount] =  useState(0);  
+count : Current value
+setCount : updated value
+useState : Initial value
+......Example.......  
+const[count,setCount]=useState(0);  
+const Increments = () => { 
+    setCount(count+1); 
+};
+......Example.......
+
+
+
+
+
+
+
+
+
+<script>
+//     const oldarr = ['rahul','thapa','raju','kishor'];
+//     console.log(oldarr[0]);   
+//     console.log(oldarr[1]);   
+//     console.log(oldarr[2]);
+    
+//    const newarr = oldarr.map(function (cval,index,arr){
+//     //    console.log(arr);
+//         return index + ":" + cval + "chavan";
+//    });  
+//    console.log(newarr);
+
+// OR
+
+
+
+const student = [
+    {fname:"rahul",lname:"chavan",age:"28"},
+    {fname:"rahul2",lname:"chavan2",age:"23"},
+    {fname:"rahul3",lname:"chavan3",age:"22"},
+    {fname:"rahul4",lname:"chavan4",age:"24"},
+];
+// console.log(student[0].fname);
+
+const newStudentData = student.map((valdata,index)=>{
+        // return valdata ;
+        return `My name is : ${valdata.fname}.My age is : ${valdata.age}`;
+});
+console.log(newStudentData);
+document.getElementById('mydata').innerHTML=newStudentData;
+// document.write("#mydata");
+
+
+</script>
+</body>
+</html>
