@@ -5,6 +5,7 @@ const Seriesdetails = [
         SeriesName: "D A R K",
         WebLink: "https://www.netflix.com/in/title/80100172"
     },
+    
 
     {   id:2,
         imgsrc: "https://www.heavenofhorror.com/wp-content/uploads/2020/04/Extracurricular-netflix-review.jpg",
