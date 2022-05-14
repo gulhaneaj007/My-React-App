@@ -11,6 +11,7 @@ const CreateNote = (props) => {
         title: "",
         content: "",
     });
+    
     const inputEvent = (event) => {
         console.log(event);
         // const value = event.target.value;

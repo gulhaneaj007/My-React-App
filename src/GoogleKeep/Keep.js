@@ -24,6 +24,7 @@ const Keep = () => {
             oldItem.filter((currdata, index) => {
                 return index !== id;
             })
+            
         )
     }
 
