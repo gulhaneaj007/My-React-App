@@ -1,28 +1,46 @@
 import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Material = () => { 
-    return (
-        <> 
-        <div>
-        <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
-        name="radio-buttons-group"
-      >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-      </RadioGroup>
-    </FormControl>
+
+const Material = () => {
+  return (
+    <React.Fragment>
+      <h2 className='text-center mt-5 mb-5'>Welcome to world...!!</h2>
+
+      <div className="container">
+        <div className="row">
+
+        <div class="card col-sm">
+          <img src="https://picsum.photos/id/1/200/150" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="google.com" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
-        </>
-    )
+
+        <div class="card  col-sm">
+          <img src="https://picsum.photos/id/1/200/150" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="google.com" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card  col-sm">
+          <img src="https://picsum.photos/id/1/200/150" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="google.com" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      
+        </div>
+      </div>
+    </React.Fragment >
+  );
 }
 export default Material;
